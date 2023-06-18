@@ -12,17 +12,17 @@ void main(List<String> args) {
     print("You failed it $grade");
   }
 
-  double gradeAlice = (80 + 80) / 2;
+  double gradeAlice = (80 + 50) / 2;
   double gradeDavid = (100 + 60) / 2;
   double gradeCameran = (90 + 70) / 2;
-  if (gradeAlice >= gradeDavid) {
+  if (gradeAlice > gradeDavid && gradeAlice > gradeCameran) {
     print("The grade of alice is higher than david");
-  } else if (gradeAlice >= gradeCameran) {
+  } else if (gradeDavid > gradeAlice && gradeDavid > gradeCameran) {
     print("The grade of alice is higher than david");
-  } else if (gradeCameran >= gradeDavid) {
+  } else if (gradeCameran > gradeAlice && gradeCameran > gradeDavid) {
     print("The grade of david is higher than alice");
-  } else if (gradeCameran >= gradeAlice) {
-    print("The grade of david is higher than alice");
+  } else if (gradeCameran == gradeAlice && gradeCameran == gradeDavid) {
+    print("All are equal");
   }
 
   // var gradeAnisha = (80 + 80) / 2;
